@@ -2,6 +2,8 @@
 	import Item from '@comp/Item.svelte';
 	import Head from '@comp/Head.svelte';
 	import Tag from '@comp/Tag.svelte';
+	import Footer from '@comp/Footer.svelte';
+
 	import { recorder, } from '@lib/recorder.svelte.js';
 	import { pm_data, } from '@lib/pm.svelte.js';
 	import { get_item, set_item, } from '@lib/u.js';
@@ -68,7 +70,7 @@
 
 <svelte:window on:beforeunload={before_unload}/>
 
-<div class="workspace" id="workspace"
+<div class="workspace min-height:100svh" id="workspace"
 	style="
 		--pm-grid-color0:{$config.grid_colors[0]};
 		--pm-grid-color1:{$config.grid_colors[1]};
@@ -76,6 +78,7 @@
 		--pm-grid-size:{$config.grid_size}px;
 		--main-bgc:{$config.main_bgc};
 		--main-color:{$config.main_color};
+		--max-width:{$config.maxwidth}px;
 	"
 >
 	<Head
@@ -83,7 +86,7 @@
 		{status_visibility}
 	/>
 
-	<div class="margin:0|auto|2.5em padding:0|3vw max-width:{$config.maxwidth}">
+	<div class="margin:0|auto|2.5em">
 		<Tag />
 	</div>
 
@@ -107,6 +110,8 @@
 			</div>
 		{/each}
 	</main>
+
+	<Footer />
 </div>
 
 

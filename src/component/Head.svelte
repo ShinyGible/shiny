@@ -33,7 +33,7 @@
 </script>
 
 
-<header class="position:relative padding:1em|1em|3.5em margin-bottom:1.5em color:#fff background-color:#990 background-image:linear-gradient(-230deg,{$config.gradient_colors[0]},{$config.gradient_colors[1]})"
+<header class="position:relative padding:1em|1em|3.5em color:#fff background-color:#990 background-image:linear-gradient(-230deg,{$config.gradient_colors[0]},{$config.gradient_colors[1]})"
 	style="--met-percent:{counts.met.percent}%; --own-percent:{counts.own.percent}%;"
 >
 	<h1 class="font-size:1.3rem font-size:1.75rem@sm text-align:center color:#fff margin:.5em|0|1em">

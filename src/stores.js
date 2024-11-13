@@ -33,6 +33,7 @@ export const default_config = {
 	locked: false,
 	maxwidth: 1200,
 	grid_size: 96,
+	open_tags: true,
 	main_bgc: '#ffffff',
 	main_color: '#213547',
 	grid_colors: ['#dddddd', '#dada0b', '#a1a112', ],

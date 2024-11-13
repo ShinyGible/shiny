@@ -2,6 +2,7 @@
 	import { pm_data, } from '@lib/pm.svelte.js';
 	import { _, } from 'svelte-i18n';
 	import { ordered_style, get_item, set_item, } from '@lib/u.js';
+	import { config, } from '@/stores.js';
 
 	let { tags, } = pm_data;
 
@@ -49,21 +50,25 @@
 
 </script>
 
-<details open class="max-width:720 margin:auto">
-	<summary class="text-align:center hide-for-print" accesskey="t">🔖 {$_('tag')}</summary>
-
-	<label class="display:flex width:fit-content margin:.5em|auto">
+<details bind:open={$config.open_tags} class="tag-details margin:auto background-color:#9993 padding:0|3vw">
+	<summary class="text-align:center hide-for-print opacity:0 transition:opacity|.3s"
+		accesskey="t">
+		🔖 {$_('tag')}
+	<label class="display:inline-flex width:fit-content margin:.5em|auto">
 		<input class="switcher" type="checkbox" data-inactive="∪" data-active="∩"
 			title={is_cap ? $_('tag.intersection_selected') : $_('tag.union_selected')}
 			bind:checked={is_cap}
 		/>
 	</label>
+	</summary>
 
-	<div class="filter-box display:flex align-items:center justify-content:center position:sticky top:0">
+
+	<div class="filter-box display:flex align-items:center justify-content:center margin:auto"
+		 style="max-width: var(--max-width);"
+	>
 		<div class="tag-cloud display:flex flex-wrap:wrap gap:.5em place-content:center">
 			{#each tags_cloud as tag (tag.label)}
-				<label class="
-					tag
+				<label class="tag
 					display:inline-flex place-items:center
 					border-radius:1em
 					padding:.5em|1em
@@ -83,6 +88,9 @@
 					<!-- <sup>({tag.count})</sup> -->
 				</label>
 			{/each}
+
+			<div class="border-right:1px|dotted height:1em align-self:center"></div>
+
 			<input type="reset" onclick={reset_tags}>
 		</div>
 		<svelte:element this="style">{style}</svelte:element>
@@ -121,6 +129,16 @@
 		&:checked::after {
 			box-shadow: inset 0 0 0 1px #6669;
 			background-color: #9999;
+		}
+	}
+
+	.tag-details[open] {
+		padding-bottom: 1em;
+	}
+	summary {
+		.tag-details[open] &,
+		.tag-details:hover & {
+			opacity: 1;
 		}
 	}
 
