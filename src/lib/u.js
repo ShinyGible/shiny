@@ -4,7 +4,7 @@ const STORAGE_KEY = 'pm-shiny-sv5';
 
 export function set_item(key, data) {
 	if (!key) { return false; }
-	let _data = get_item();
+	let _data = get_item() || {};
 	_data[key] = data;
 	// console.log('set_item', key, data);
 	localStorage.setItem(STORAGE_KEY, JSON.stringify(_data));
@@ -12,7 +12,7 @@ export function set_item(key, data) {
 
 export function get_item(key) {
 	let _data = localStorage.getItem(STORAGE_KEY);
-	if (!_data) { return {}; }
+	if (!_data) { return undefined; }
 	_data = JSON.parse(_data);
 	return key ? _data[key] : _data;
 };
