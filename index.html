@@ -8,7 +8,7 @@
     <meta name="description" content="a shareadble pokemongo shiny list" />
     <title>✨ Pokemon GO Shiny checklist :: made by Rplus</title>
     <script>
-      let qs = new URL(location).searchParams;
+      let qs = new URL(location.href).searchParams;
       if (qs.get('reset')) {
         localStorage.clear();
       }
