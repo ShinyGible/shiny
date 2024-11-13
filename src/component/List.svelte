@@ -7,6 +7,7 @@
 	import { get_item, set_item, } from '@lib/u.js';
 	import { _, } from 'svelte-i18n';
 	import { status, name, config, } from '@/stores.js';
+	import domtoimage from 'dom-to-image';
 
 	let { groups, pms, max_index, } = pm_data;
 
@@ -68,7 +69,7 @@
 
 <svelte:window on:beforeunload={before_unload}/>
 
-<div class="workspace"
+<div class="workspace" id="workspace"
 	style="
 		--pm-grid-color0:{$config.grid_colors[0]};
 		--pm-grid-color1:{$config.grid_colors[1]};
@@ -83,7 +84,7 @@
 		{status_visibility}
 	/>
 
-	<div class="margin:0|auto|2.5em max-width:800 padding:0|2em">
+	<div class="margin:0|auto|2.5em padding:0|3vw max-width:{$config.maxwidth}">
 		<Tag />
 	</div>
 

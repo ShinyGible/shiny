@@ -1,15 +1,28 @@
 <script>
-	import { get_pm_img_src, get_name, } from '@lib/pm.svelte.js';
+	import { get_name, } from '@lib/pm.svelte.js';
 	import { _, locale, } from 'svelte-i18n';
 	import { config, } from '@/stores.js';
+	import { isDev, } from '@lib/u.js';
 
 	let { pm, status, handle_click_pm, } = $props();
 
+	let folder_path = `https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/Addressable%20Assets`;
+	if (isDev) {
+		folder_path = `/img`;
+	}
+
 	let tags_class = pm.tag.map(tag => ` tag-${tag}`).join('');
 
-	let src = `/img/${pm.pid}.s.icon.png`;
-	let src0 = `/img/${pm.pid}.icon.png`;
-	// let src = get_pm_img_src(pm.pid, true);
+	let src = get_pm_img_src(pm.pid, true, pm.src);
+	let src0 = get_pm_img_src(pm.pid, false, pm.src /* TODO */ );
+
+	function get_pm_img_src(pid = '', shiny = true, direct_src = '') {
+		if (direct_src) {
+			return direct_src;
+		}
+		return `${folder_path}/${pid}${shiny ? '.s' : ''}.icon.png`;
+	}
+
 </script>
 
 <div class="pm status-{status} position:relative width:96@sm width:72 aspect-ratio:1 {tags_class}"
@@ -120,6 +133,7 @@
 	}
 
 	.pm {
+		break-inside: avoid;
 		background-color: var(--main-bgc);
 		width: var(--pm-grid-size, 96px);
 		height: var(--pm-grid-size, 96px);

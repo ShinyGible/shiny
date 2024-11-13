@@ -4,6 +4,7 @@
 	import Export from '@comp/Export.svelte';
 	import Share from '@comp/Share.svelte';
 	import Custom from '@comp/Custom.svelte';
+	import CustomStyle from '@comp/CustomStyle.svelte';
 
 	import { _, } from 'svelte-i18n';
 	import { get_item, set_item, } from '@lib/u.js';
@@ -29,12 +30,11 @@
 </script>
 
 <aside class="ctrl hide-for-print" class:active={ ctrl_visibility }>
-	<input type="checkbox" id="ctrl-checkbox" bind:checked={ctrl_visibility} class="sr-only-u">
+	<input type="checkbox" id="ctrl-checkbox" bind:checked={ctrl_visibility} class="sr-only-u" accesskey="c">
 	<label class="ctrl-content-overlay" for="ctrl-checkbox"></label>
 
 	<div class="ctrl-content">
 		<!--
-
 		<details bind:open={io.tag}>
 			<summary>🔖 {$_('tag')}</summary>
 			<div>
@@ -62,6 +62,11 @@
 			<div>
 				<Export />
 			</div>
+		</details>
+
+		<details bind:open={io.custom_style}>
+			<summary>🎨 {$_('custom.style')}</summary>
+			<CustomStyle />
 		</details>
 
 		<details bind:open={io.custom}>

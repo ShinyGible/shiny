@@ -5,10 +5,9 @@
 
 	let { tags, } = pm_data;
 
-
 	let cached_tags = get_item('checked_tags') || [];
 
-	let is_cap = $state(false);
+	let is_cap = $state(get_item('filter_is_cap') || false);
 
 	let tags_cloud = $state(
 		Object.keys(tags).sort().map(tag => {
@@ -20,9 +19,14 @@
 		})
 	);
 
+	$effect(() => {
+		set_item('filter_is_cap', is_cap);
+	})
+
 	let style = $derived.by(() => {
 		let _tags = tags_cloud.map(tag => tag.checked && tag.label).filter(Boolean);
 		set_item('checked_tags', _tags);
+
 		if (!_tags.length) {
 			return '';
 		}
@@ -36,47 +40,54 @@
 		return ordered_style + selectors + `{ display:flex; }`;
 	});
 
+	function reset_tags() {
+		is_cap = false;
+		tags_cloud.forEach(tag => {
+			tag.checked = false;
+		})
+	}
+
 </script>
 
+<details open class="max-width:720 margin:auto">
+	<summary class="text-align:center hide-for-print" accesskey="t">🔖 {$_('tag')}</summary>
 
-
-<div class="filter-box display:flex align-items:center">
-	<label class="display:flex margin:.5em width:fit-content">
+	<label class="display:flex width:fit-content margin:.5em|auto">
 		<input class="switcher" type="checkbox" data-inactive="∪" data-active="∩"
 			title={is_cap ? $_('tag.intersection_selected') : $_('tag.union_selected')}
 			bind:checked={is_cap}
 		/>
 	</label>
 
-	<div class="border-left:1px|dotted height:1em"></div>
-
-	<div class="tag-cloud display:flex flex-wrap:wrap gap:.5em place-content:center max-width:80%">
-		{#each tags_cloud as tag (tag.label)}
-			<label class="
-				tag
-				display:inline-flex place-items:center
-				border-radius:1em
-				padding:.5em|1em
-				line-height:1
-				border-bottom:3px|solid|#0000
-				cursor:pointer
-				text-transform:uppercase
-				color:#fff
-				background-color:#9996
-				text-shadow:1px|1px|1px|#0009
-				font-size:smaller
-				font-weight:900"
-				title="count:{tag.count}"
-			>
-				<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
-				{tag.label}
-				<!-- <sup>({tag.count})</sup> -->
-			</label>
-		{/each}
+	<div class="filter-box display:flex align-items:center justify-content:center position:sticky top:0">
+		<div class="tag-cloud display:flex flex-wrap:wrap gap:.5em place-content:center">
+			{#each tags_cloud as tag (tag.label)}
+				<label class="
+					tag
+					display:inline-flex place-items:center
+					border-radius:1em
+					padding:.5em|1em
+					line-height:1
+					border-bottom:3px|solid|#0000
+					cursor:pointer
+					text-transform:uppercase
+					color:#fff
+					background-color:#9996
+					text-shadow:1px|1px|1px|#0009
+					font-size:smaller
+					font-weight:900"
+					title="count:{tag.count}"
+				>
+					<input type="checkbox" class="sr-only-u" bind:checked={tag.checked}>
+					{tag.label}
+					<!-- <sup>({tag.count})</sup> -->
+				</label>
+			{/each}
+			<input type="reset" onclick={reset_tags}>
+		</div>
+		<svelte:element this="style">{style}</svelte:element>
 	</div>
-
-	<svelte:element this="style">{style}</svelte:element>
-</div>
+</details>
 
 <style>
 	.tag {

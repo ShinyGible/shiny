@@ -20,8 +20,9 @@
 
 
 <button class="btn-icon record-btn bottom:3rem hide-for-print"
- onclick={() => add_record()}
- title={$_('record.save')}
+	onclick={() => add_record()}
+	title={$_('record.save')}
+	accesskey="s"
 >
 	💾
 	<span class="sr-only">

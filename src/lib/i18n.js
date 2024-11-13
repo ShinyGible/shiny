@@ -127,6 +127,10 @@ let _words = {
 		'en': 'Custom',
 		'zh': '自訂',
 	},
+	'custom.style': {
+		'en': 'Style',
+		'zh': '樣式',
+	},
 	'custom.main_color': {
 		'en': 'Front color',
 		'zh': '前景色',
