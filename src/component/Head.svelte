@@ -1,6 +1,5 @@
 <script>
 	import { status, name, config, } from '@/stores.js';
-	import { get_item, set_item, } from '@lib/u.js';
 	import { _, } from 'svelte-i18n';
 
 	let { status_counter, status_visibility, } = $props();

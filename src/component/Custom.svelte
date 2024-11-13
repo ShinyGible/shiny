@@ -1,6 +1,5 @@
 <script>
 	import { _, locale, locales } from 'svelte-i18n';
-	import { get_item, set_item, } from '@lib/u.js';
 	import { config, default_config } from '@/stores.js';
 
 	function reset_data_source() {

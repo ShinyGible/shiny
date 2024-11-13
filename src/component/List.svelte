@@ -7,7 +7,6 @@
 	import { get_item, set_item, } from '@lib/u.js';
 	import { _, } from 'svelte-i18n';
 	import { status, name, config, } from '@/stores.js';
-	import domtoimage from 'dom-to-image';
 
 	let { groups, pms, max_index, } = pm_data;
 

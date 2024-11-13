@@ -1,7 +1,6 @@
 <script context="module">
 	import List from '@comp/List.svelte';
 	import Ctrl from '@comp/Ctrl.svelte';
-	import Footer from '@comp/Footer.svelte';
 	import Float_Btns from '@comp/Float_Btns.svelte';
 
 	// import { pm_data, } from '@lib/pm.svelte.js';
@@ -31,5 +30,3 @@
 	<button onclick={() => reset_ls()}>try to reset localStorage</button>
 
 {/await}
-
-<Footer />
