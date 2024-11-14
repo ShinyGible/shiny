@@ -7,8 +7,8 @@
 	let { pm, status, handle_click_pm, } = $props();
 
 	let folder_path = `https://cdn.jsdelivr.net/gh/PokeMiners/pogo_assets/Images/Pokemon%20-%20256x256/Addressable%20Assets`;
-	if (isDev) {
-		folder_path = `/img`;
+	if (isDev()) {
+		folder_path = `http://localhost:1111/img`;
 	}
 
 	let tags_class = pm.tag.map(tag => ` tag-${tag}`).join('');
