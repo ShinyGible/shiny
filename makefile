@@ -4,6 +4,9 @@ init:
 dev:
 	bun run dev;
 
+host-image:
+	bunx http-server ./tasks/tmp -p 1111
+
 build:
 	bun run build;
 
