@@ -25,7 +25,7 @@
 
 </script>
 
-<div class="pm status-{status} position:relative width:96@sm width:72 aspect-ratio:1 {tags_class}"
+<button class="pm status-{status} width:96@sm width:72 aspect-ratio:1 {tags_class}"
 	class:img_diff={$config.img_diff}
 	data-index={pm.index}
 	onclick={() => handle_click_pm(pm.index)}
@@ -76,7 +76,7 @@
 			#{pm.dex}
 		</div>
 	</div>
-</div>
+</button>
 
 <style>
 	img {

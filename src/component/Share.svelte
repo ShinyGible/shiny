@@ -9,7 +9,7 @@
 
 	let short_href = $state(null);
 
-	let is_fetching = false;
+	let is_fetching = $state(false);
 	async function gen_short_href() {
 		if (is_fetching) {
 			alert('');

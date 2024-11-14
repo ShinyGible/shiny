@@ -157,6 +157,8 @@
 
 	.pm {
 		position: relative;
+		color: inherit;
+		border: unset;
 		border-radius: 10%;
 		background-color: var(--main-bgc);
 		width: var(--grid-size, 96px);

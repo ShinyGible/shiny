@@ -51,9 +51,7 @@
 		title={$_('nickname')}
 	>
 		@
-		<span contenteditable
-			bind:textContent={$name}
-		/>
+		<span contenteditable bind:textContent={$name}></span>
 	</div>
 
 	<div class="dashboard flex gap:min(2vw,1em) justify-content:center align-items:center user-select:none font-size:smaller">

@@ -48,6 +48,8 @@
 		})
 	}
 
+	let style_tag = 'style';
+
 </script>
 
 <details bind:open={$config.open_tags} class="tag-details margin:auto background-color:#9993 padding:0|3vw">
@@ -93,7 +95,7 @@
 
 			<input type="reset" onclick={reset_tags}>
 		</div>
-		<svelte:element this="style">{style}</svelte:element>
+		<svelte:element this={style_tag}>{style}</svelte:element>
 	</div>
 </details>
 

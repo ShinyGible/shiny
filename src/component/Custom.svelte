@@ -19,7 +19,7 @@
 				{$_('lang')}
 				<select bind:value={$locale}>
 					{#each $locales as lang}
-						<option value={lang} label={lang} />
+						<option value={lang}>{lang}</option>
 					{/each}
 				</select>
 			</label>
@@ -88,9 +88,5 @@
 		&::marker {
 			content: attr(data-marker) ' ';
 		}
-	}
-
-	input[type="color"] {
-		width: 4em;
 	}
 </style>

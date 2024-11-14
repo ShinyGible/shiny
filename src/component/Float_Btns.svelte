@@ -22,7 +22,6 @@
 <button class="btn-icon record-btn bottom:3rem hide-for-print"
 	onclick={() => add_record()}
 	title={$_('record.save')}
-	accesskey="s"
 >
 	💾
 	<span class="sr-only">
@@ -76,13 +75,11 @@
 
 		&:hover,
 		&:focus,
-		&.active,
 		&:active {
 			opacity: 1;
 			scale: 1.1;
 		}
 
-		&.active,
 		&:active {
 			border-style: inset;
 			background-color: #ffd;
