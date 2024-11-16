@@ -36,8 +36,11 @@
 <header class="position:relative padding:1em|1em|3.5em color:#fff background-color:#990 background-image:linear-gradient(-230deg,{$config.gradient_colors[0]},{$config.gradient_colors[1]})"
 	style="--met-percent:{counts.met.percent}%; --own-percent:{counts.own.percent}%;"
 >
-	<h1 class="font-size:1.3rem font-size:1.75rem@sm text-align:center color:#fff margin:.5em|0|1em">
-		✨ Shiny Checklist
+	<h1 class="font-size:1.3rem font-size:1.75rem@sm text-align:center margin:.5em|0|1em">
+		✨
+		<span class="mix-blend-mode:difference">
+			Shiny Checklist
+		</span>
 	</h1>
 
 	<!--
@@ -47,7 +50,7 @@
 	-->
 
 	<div
-		class="name-input position:absolute right:0 bottom:0 z-index:2 padding:.25em|.75em max-width:80% word-wrap:break-word word-break:break-all cursor:text background-color:#fff3:hover display:none_br"
+		class="name-input position:absolute right:0 bottom:0 z-index:2 padding:.25em|.75em max-width:80% word-wrap:break-word word-break:break-all cursor:text background-color:#fff3:hover display:none_br mix-blend-mode:difference"
 		title={$_('nickname')}
 	>
 		@
