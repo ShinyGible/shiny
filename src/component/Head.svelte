@@ -1,6 +1,7 @@
 <script>
 	import { status, name, config, } from '@/stores.js';
 	import { _, } from 'svelte-i18n';
+	import date from '@data/latest-fetch-time.txt?raw';
 
 	let { status_counter, status_visibility, } = $props();
 
@@ -35,6 +36,7 @@
 
 <header class="position:relative padding:1em|1em|3.5em color:#fff background-color:#990 background-image:linear-gradient(-230deg,{$config.gradient_colors[0]},{$config.gradient_colors[1]})"
 	style="--met-percent:{counts.met.percent}%; --own-percent:{counts.own.percent}%;"
+	data-update={date}
 >
 	<h1 class="font-size:1.3rem font-size:1.75rem@sm text-align:center margin:.5em|0|1em">
 		✨
@@ -102,6 +104,23 @@
 			linear-gradient(currentcolor, currentcolor);
 		background-size: var(--met-percent) 100%, var(--own-percent) 100%;
 		background-repeat: no-repeat;
+	}
+
+	header::before {
+		content: attr(data-update);
+		position: absolute;
+		top: 100%;
+		right: .5em;
+		font-size: small;
+		font-family: monospace;
+		padding: 0.25em;
+		opacity: 0.5;
+		mix-blend-mode:difference;
+		transition: opacity 1.5s;
+	}
+
+	header:not(:hover)::before {
+		opacity: 0.2;
 	}
 
 	.pm {
