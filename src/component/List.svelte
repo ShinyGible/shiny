@@ -142,8 +142,8 @@
 }
 
 .pm-group {
-	content-visibility: auto;
-	contain-intrinsic-size: 300px;
+	/* content-visibility: auto; */
+	/* contain-intrinsic-size: 300px; */
 }
 
 </style>
