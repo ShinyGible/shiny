@@ -91,7 +91,7 @@
 	</div>
 
 	<input type="checkbox" id="list-locker" class="sr-only-u" bind:checked={$config.locked} />
-	<main class="pm-list display:flex flex-wrap:wrap gap:2em place-content:center margin:0|auto padding:0|3vw|3em
+	<main class="pm-list display:flex flex-wrap:wrap place-content:center margin:0|auto padding:0|3vw|3em
 		max-width:{$config.maxwidth}
 		{status_visibility_class}"
 	>
@@ -126,6 +126,8 @@
 }
 
 .pm-list {
+	gap: calc(var(--pm-grid-size) * .25);
+
 	&:not(.visible-status-0) :global(.pm.status-0),
 	&:not(.visible-status-1) :global(.pm.status-1),
 	&:not(.visible-status-2) :global(.pm.status-2),
