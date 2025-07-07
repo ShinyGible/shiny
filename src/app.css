@@ -203,7 +203,7 @@
 		}
 	}
 	.pm.status-0 {
-		box-shadow: inset 0 0 0 1px var(--pm-grid-color0);
+		box-shadow: inset 0 0 0 var(--box-shadow-width, 1px) var(--pm-grid-color0);
 	}
 	.pm.status-2 {
 		--marker-color: var(--pm-grid-color1, #dada0b);
@@ -235,6 +235,9 @@
 }
 
 @media print {
+	.pm.status-0 {
+		--box-shadow-width: 2px;
+	}
 	.hide-for-print {
 		display: none !important;
 	}

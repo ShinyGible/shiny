@@ -63,7 +63,7 @@
 	>{status}</div>
 	-->
 
-	<div class="caption position:absolute z-index:15 left:1 top:1 padding:.3em|.25em pointer-events:none transition:opacity|0.3s">
+	<div class="caption position:absolute z-index:15 left:2.5% top:1% padding:.3em|.25em pointer-events:none transition:opacity|0.3s">
 		<div class="name font-size:10 font-size:12@sm opacity:0.4 transition:opacity|0.3s">
 			{get_name(pm.name, $locale)}
 
@@ -72,7 +72,7 @@
 			{/if}
 		</div>
 
-		<div class="dex font-size:10 opacity:0 transition:opacity|.3s">
+		<div class="dex text-align:start font-size:10 opacity:0 transition:opacity|.3s">
 			#{pm.dex}
 		</div>
 	</div>
