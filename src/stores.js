@@ -29,6 +29,7 @@ export const pms = writable([]);
 
 export const default_config = {
 	img_diff: false,
+	show_name: true,
 	show_suffix: true,
 	locked: false,
 	maxwidth: 1200,

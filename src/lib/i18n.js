@@ -183,6 +183,10 @@ let _words = {
 		'en': 'Show suffix name',
 		'zh': '顯示名稱註記',
 	},
+	'show.name': {
+		'en': 'Show name',
+		'zh': '顯示名稱',
+	},
 	'lang': {
 		'en': 'Language',
 		'zh': '語系',

@@ -38,6 +38,13 @@
 
 		<li data-marker="📌">
 			<label>
+				<input type="checkbox" bind:checked={$config.show_name}>
+				{$_('show.name')}
+			</label>
+		</li>
+
+		<li data-marker="📌">
+			<label>
 				<input type="checkbox" bind:checked={$config.show_suffix}>
 				{$_('show.suffix')}
 			</label>

@@ -63,7 +63,7 @@
 	>{status}</div>
 	-->
 
-	<div class="caption position:absolute z-index:15 left:2.5% top:1% padding:.3em|.25em pointer-events:none transition:opacity|0.3s">
+	<div class="caption position:absolute z-index:15 left:2.5% top:1% padding:.3em|.25em pointer-events:none transition:opacity|0.3s" hidden={!$config.show_name}>
 		<div class="name font-size:10 font-size:12@sm opacity:0.4 transition:opacity|0.3s">
 			{get_name(pm.name, $locale)}
 
