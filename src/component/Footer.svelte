@@ -30,10 +30,10 @@
 			most images from: <a href="https://github.com/ZeChrales/PogoAssets" target="_blank" rel="noopener">PogoAssets</a> repo.
 		</li>
 		<li>
-			design style from: <a href="https://leekduck.com/shinylist/" target="_blank" rel="noopener">Leek Duck</a>
+			design style from: <a href="https://leekduck.com/" target="_blank" rel="noopener">Leek Duck</a>
 		</li>
 		<li>
-			report an issue on <a href="https://github.com/rplus/Pokemon-shiny/issues" target="_blank" rel="noopener">GitHub repo</a>
+			report an issue on <a href="https://github.com/rplus/pokemongo-shiny/issues" target="_blank" rel="noopener">GitHub repo</a>
 			<br>
 			or add a new shiny one?
 		</li>
