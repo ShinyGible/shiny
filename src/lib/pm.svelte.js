@@ -59,8 +59,9 @@ export function handle_pms(pms_json) {
 	];
 
 	// handle groups
-	let groups_map = {};
-	let groups = [];
+	let root_map = {};
+	let root_index_map = {};
+	let all_groups = [];
 
 	let tags = {};
 	let pms = pms_json.map(pm => {
@@ -115,29 +116,54 @@ export function handle_pms(pms_json) {
 
 		{ // grouping~
 			let _group = pm.group || pm.pid;
-			let g_index = groups_map[_group];
-			if (!g_index && g_index !== 0) {
-				g_index = groups.length;
-				groups_map[_group] = g_index;
-				groups[g_index] = {
+			let _root_group = _group.split('_')[0];
+
+			if (!root_map[dex]) {
+				root_map[dex] = [];
+			}
+			if (root_map[dex].indexOf(_root_group) === -1) {
+				root_map[dex].push(_root_group);
+			}
+
+			let root_group = root_map[dex][0];
+
+			let root_index = root_index_map[root_group];
+			if (!root_index && root_index !== 0) {
+				root_index = all_groups.length;
+				root_index_map[root_group] = root_index;
+
+				all_groups[root_index] = {
+					root: root_group,
+					groups: [],
+				};
+			}
+
+			let _root = all_groups[root_index];
+
+			let _group_index = _root.groups.findIndex(g => g.label === _group);
+			if (_group_index === -1) {
+				_group_index = _root.groups.length;
+				_root.groups[_group_index] = {
 					label: _group,
 					pids: [],
 					pms: [],
+					root_groups: [],
 				};
 			}
-			groups[g_index].pids.push(pm.pid);
-			groups[g_index].pms.push(op_pm);
+			_root.groups[_group_index].pids.push(pm.pid);
+			_root.groups[_group_index].pms.push(op_pm);
 		}
 
 		return op_pm;
 	})
 	.filter(Boolean);
 
-	groups_map = null;
+	root_map = null;
+	root_index_map = null;
 
 	return {
 		pms,
-		groups,
+		groups: all_groups.map(i => i.groups).flat(),
 		max_index,
 		tags,
 	};
