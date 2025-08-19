@@ -22,21 +22,29 @@ try to reset your config setting by url paramerter `reset=1`:
 
 There are many method for data usage.
 
-A. (default): use site's csv data
+### A. (default): use site's csv data
+
   if you want to update this,
   just create a PR for this project to update the (`pm.csv`)[https://github.com/Rplus/pokemongo-shiny/blob/main/src/assets/data/pm.csv]
 
-B. custom csv data url:
+### B. custom csv data url:
+
   you can host csv file by yourself, and just enter your csv url into sidebar to apply pm data.
 
-C. use my google spreadsheet,
-  just enter my spreadsheet public url into sidebar: <https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/pm>
+### C. use my google spreadsheet
+
+  just enter my spreadsheet public url into side-panel: <https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/pm>
 
   if you want to update my spreadsheet ( <https://docs.google.com/spreadsheets/d/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/edit?gid=1540699392> )
   click right-top button to send me a request for getting a edit permission.
   And then, you could help me to update the data easy, that's really great!
 
-D. use your google spreadsheet
+  ※
+  If you are not sure whether you have made a mistake, you can copy the spreadsheet to your own Google spreadsheet.
+  And then change the custom data url to your spreadsheet and just give it a try
+
+### D. use your google spreadsheet
+
   you need to get the spreadsheet public url, the easiest method is:
   https://opensheet.elk.sh/spreadsheet_id/tab_name
   just change the spreadsheet_id/tab_name with your google spreadsheet page.
@@ -54,7 +62,7 @@ if you get in a trouble when custom data url, just reset all setting by trigger 
 
 
 
-### data property
+## Data property
 
 all csv columns/properties:
 
