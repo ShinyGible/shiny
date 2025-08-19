@@ -1,7 +1,7 @@
 ## 1. For user:
 
-If you meet some bugs,
-try to reset your config setting by url paramerter `reset=1`:
+If you get in trouble with some bugs,  
+try to reset your config setting by url paramerter `reset=1`:  
 `https://rplus.github.io/pokemongo-shiny/?reset=1`
 
 
@@ -20,7 +20,7 @@ try to reset your config setting by url paramerter `reset=1`:
 
 ## 3. For updating shiny list data:
 
-There are many method for data usage.
+There are many methods for data usage.
 
 ### A. (default): use site's csv data
 
@@ -35,20 +35,21 @@ There are many method for data usage.
 
   just enter my spreadsheet public url into side-panel: <https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/pm>
 
-  if you want to update my spreadsheet ( <https://docs.google.com/spreadsheets/d/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/edit?gid=1540699392> )
-  click right-top button to send me a request for getting a edit permission.
+  if you want to update my spreadsheet  
+  <https://docs.google.com/spreadsheets/d/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/edit?gid=1540699392>  
+  click right-top button to send me a request for getting a edit permission.  
   And then, you could help me to update the data easy, that's really great!
 
   ※
-  If you are not sure whether you have made a mistake, you can copy the spreadsheet to your own Google spreadsheet.
-  And then change the custom data url to your spreadsheet and just give it a try
+  If you are not sure whether you have made a mistake, you can copy the spreadsheet to your own Google spreadsheet.  
+  And then change the custom data url to your spreadsheet and just give it a try.
 
 ### D. use your google spreadsheet
 
   you need to get the spreadsheet public url, the easiest method is:
-  https://opensheet.elk.sh/spreadsheet_id/tab_name
-  just change the spreadsheet_id/tab_name with your google spreadsheet page.
-  And then, you could update spreadsheet by yourself
+  `https://opensheet.elk.sh/spreadsheet_id/tab_name`  
+  just change the `spreadsheet_id/tab_name` with your google spreadsheet page.  
+  And then, you could update spreadsheet by yourself.
 
 PS1:
 custom data url:
