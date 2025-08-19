@@ -40,8 +40,9 @@ There are many methods for data usage.
   click right-top button to send me a request for getting a edit permission.  
   And then, you could help me to update the data easy, that's really great!
 
-  ※
-  If you are not sure whether you have made a mistake, you can copy the spreadsheet to your own Google spreadsheet.  
+  ※  
+  If you are not sure whether you have made a mistake,  
+  you can copy the spreadsheet to your own Google spreadsheet.  
   And then change the custom data url to your spreadsheet and just give it a try.
 
 ### D. use your google spreadsheet
