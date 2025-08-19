@@ -25,7 +25,7 @@ There are many methods for data usage.
 ### A. (default): use site's csv data
 
   if you want to update this,
-  just create a PR for this project to update the (`pm.csv`)[https://github.com/Rplus/pokemongo-shiny/blob/main/src/assets/data/pm.csv]
+  just create a PR for this project to update the [`pm.csv`](https://github.com/Rplus/pokemongo-shiny/blob/main/src/assets/data/pm.csv)
 
 ### B. custom csv data url:
 
@@ -33,7 +33,8 @@ There are many methods for data usage.
 
 ### C. use my google spreadsheet
 
-  just enter my spreadsheet public url into side-panel: <https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/pm>
+  just enter my spreadsheet public url into side-panel:  
+  <https://opensheet.elk.sh/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/pm>
 
   if you want to update my spreadsheet  
   <https://docs.google.com/spreadsheets/d/1l1CXHdge8_2F2ifjMY71f23DJ_98Ei2QNZ9rPdBd8jQ/edit?gid=1540699392>  
@@ -41,13 +42,13 @@ There are many methods for data usage.
   And then, you could help me to update the data easy, that's really great!
 
   ※  
-  If you are not sure whether you have made a mistake,  
+  If you are not sure whether you will make a mistake,  
   you can copy the spreadsheet to your own Google spreadsheet.  
   And then change the custom data url to your spreadsheet and just give it a try.
 
 ### D. use your google spreadsheet
 
-  you need to get the spreadsheet public url, the easiest method is:
+  you need to get the spreadsheet public url, the easiest method is:  
   `https://opensheet.elk.sh/spreadsheet_id/tab_name`  
   just change the `spreadsheet_id/tab_name` with your google spreadsheet page.  
   And then, you could update spreadsheet by yourself.
