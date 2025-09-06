@@ -193,6 +193,12 @@ function get_default_tags(tags = [], pid = '', dex = 1) {
 		case 'ORIGIN':
 			tags.push('🔀ORIGIN');
 			break;
+		case 'DYNAMAX':
+			tags.push('🦖DYNAMAX');
+			break;
+		case 'GIGANTAMAX':
+			tags.push('🦖GIGANTAMAX');
+			break;
 		default:
 			break;
 	}
