@@ -63,7 +63,7 @@
 	}
 
 	function fill_status(_status) {
-		return _status.padEnd(max_index, '0').split('');
+		return _status.padEnd(max_index + 1, '0').split('');
 	}
 
 </script>
