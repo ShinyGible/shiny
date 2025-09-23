@@ -35,7 +35,7 @@
 	title={title}
 >
 	<div class="img-box position:absolute inset:0 border-radius:inherit overflow:hidden"
-		style="--w: 140%; --t:-30%; --l: -5%;"
+		style="--w: 140%; --t:-30%; --l: -5%; {pm.style}"
 	>
 		<!--
 		-->
