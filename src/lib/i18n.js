@@ -10,19 +10,19 @@ let _words = {
 		'it': 'Nickname',
 	},
 	'status.none': {
-		'en': 'none',
+		'en': 'Unregistered',
 		'zh': '無緣',
 	},
 	'status.met': {
-		'en': 'Met',
+		'en': 'Registered',
 		'zh': '見過',
 	},
 	'status.own': {
-		'en': 'Own',
+		'en': 'Owned',
 		'zh': '持有',
 	},
 	'status.extra': {
-		'en': 'Much',
+		'en': 'Extra',
 		'zh': '有餘',
 	},
 	'order': {

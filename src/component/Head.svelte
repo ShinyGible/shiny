@@ -65,7 +65,8 @@
 				/
 			{/if}
 
-			<label class="pm status-{index} position:relative width:60 aspect-ratio:1 height:60 place-content:center place-items:center text-align:center cursor:pointer"
+			<label class="pm status-{index} position:relative width:70 aspect-ratio:1 height:70 place-content:center place-items:center text-align:center cursor:pointer"
+				title={$_(`status.${status_labels[index]}`)}
 			>
 				<!-- <label class="label-has-checkbox cursor:pointer"> -->
 					<input
@@ -79,7 +80,7 @@
 					<div class="number font-size:1.2rem">
 						{status_counter[index]}
 					</div>
-					<div class="width:100% margin-top:.25em font-size:smaller text-transform:capitalize opacity:0.5">
+					<div class="white-space:nowrap overflow:hidden text-overflow:ellipsis width:100% padding:0|2 margin-top:.25em font-size:smaller text-transform:capitalize opacity:0.5">
 						{$_(`status.${status_labels[index]}`)}
 					</div>
 				<!-- </label> -->
