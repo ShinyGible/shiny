@@ -23,6 +23,8 @@
 		return `${folder_path}/${pid}${shiny ? '.s' : ''}.icon.png`;
 	}
 
+	let title = `#${pm.dex} ${get_name(pm.name, $locale)} @${pm.debut}`
+
 </script>
 
 <button class="pm status-{status} width:96@sm width:72 aspect-ratio:1 {tags_class}"
@@ -30,6 +32,7 @@
 	data-index={pm.index}
 	onclick={() => handle_click_pm(pm.index)}
 	style="--group-order:{pm.order || 0};--dex-order:{pm.dex};"
+	title={title}
 >
 	<div class="img-box position:absolute inset:0 border-radius:inherit overflow:hidden"
 		style="--w: 140%; --t:-30%; --l: -5%;"
