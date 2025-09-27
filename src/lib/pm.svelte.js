@@ -174,57 +174,38 @@ export function get_name(names, lang = 'en') {
 }
 
 function get_default_tags(tags = [], pid = '', dex = 1) {
-	if (!tags.includes('costume')) {
-		tags.push('-costume');
+	if (!tags.includes('Dynamax')) {
+		tags.push('Non-Dynamax');
 	}
 	switch (pid.split('.f')[1]) {
 		case 'HISUIAN':
-			tags.push('📍hisuian');
+			tags.push('hisuian');
 			break;
 		case 'GALARIAN':
-			tags.push('📍galarian');
+			tags.push('galarian');
 			break;
 		case 'ALOLA':
-			tags.push('📍alola');
+			tags.push('alola');
 			break;
 		case 'MEGA':
-			tags.push('🚀mega');
-			break;
-		case 'ORIGIN':
-			tags.push('🔀ORIGIN');
-			break;
-		case 'DYNAMAX':
-			tags.push('🦖DYNAMAX');
+			tags.push('mega');
 			break;
 		case 'GIGANTAMAX':
-			tags.push('🦖GIGANTAMAX');
+			tags.push('GIGANTAMAX');
 			break;
 		default:
 			break;
 	}
 
 	switch (dex) {
-		case 25:
-		case 26:
-		case 172:
-			tags.push('🐣pika');
-			break;
 		case 201:
-			tags.push('🐣unown');
+			tags.push('unown');
 			break;
 		case 327:
-			tags.push('🐣spinda');
+			tags.push('spinda');
 			break;
-		case 133:
-		case 134:
-		case 135:
-		case 136:
-		case 196:
-		case 197:
-		case 470:
-		case 471:
-		case 700:
-			tags.push('🐣eevee');
+		case 666:
+			tags.push('vivillon');
 			break;
 		default:
 			break;
