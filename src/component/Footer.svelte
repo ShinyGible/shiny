@@ -33,7 +33,7 @@
 			design style from: <a href="https://leekduck.com/" target="_blank" rel="noopener">Leek Duck</a>
 		</li>
 		<li>
-			report an issue on <a href="https://github.com/rplus/pokemongo-shiny/issues" target="_blank" rel="noopener">GitHub repo</a>
+			report an issue on <a href="https://github.com/rplus/pokemongo-shiny/" target="_blank" rel="noopener">GitHub repo</a>
 			<br>
 			or add a new shiny one?
 		</li>
